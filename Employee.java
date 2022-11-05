@@ -1,28 +1,36 @@
-package p4;
+package p2;
 
-public class Employee<T1, T2, T3, T4> {
-  private T1 id;
+class Employee {
+  int employeeId;
 
-  private T2 name;
+  String employeeName;
 
-  private T3 salary;
+  double salary;
 
-  private T4 dept;
+  public Employee(int employeeId, String employeeName, double salary) {
 
-  Employee(T1 id, T2 name, T3 salary, T4 dept) {
-
-    this.id = id;
-    this.name = name;
+    this.employeeId = employeeId;
+    this.employeeName = employeeName;
     this.salary = salary;
-    this.dept = dept;
   }
 
-  public void displayDetails() {
+  public int setEmployeeId() {
 
-    System.out.println("Employee Id: " + this.id);
-    System.out.println("Employee Name: " + this.name);
-    System.out.println("Employee Salary: " + this.salary);
-    System.out.println("Employee Department: " + this.dept);
-    System.out.println();
+    return this.employeeId;
+  }
+
+  public void setEmployeeName(String employeeName) {
+
+    this.employeeName = employeeName;
+  }
+
+  public double getSalary() {
+
+    return this.salary;
+  }
+
+  public void setSalary(double salary) {
+
+    this.salary = salary;
   }
 }
